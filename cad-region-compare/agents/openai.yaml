@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Region Compare"
+  short_description: "Compare reference and output drawing regions"
+  default_prompt: "Use $cad-region-compare to compare local PDF/image drawing regions and record similarity metrics before claiming a CAD output matches a reference."

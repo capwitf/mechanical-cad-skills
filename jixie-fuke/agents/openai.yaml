@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jixie Fuke"
+  short_description: "Mechanical reference drawing replication"
+  default_prompt: "Use $jixie-fuke when a mechanical drawing must closely replicate a supplied reference image, PDF, screenshot, DWG, or CAD output."

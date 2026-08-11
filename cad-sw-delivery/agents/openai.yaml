@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD/SW Delivery"
+  short_description: "CAD and SolidWorks delivery acceptance"
+  default_prompt: "Use $cad-sw-delivery to plan, generate, verify, and report a CAD or SolidWorks deliverable without overclaiming visual quality."

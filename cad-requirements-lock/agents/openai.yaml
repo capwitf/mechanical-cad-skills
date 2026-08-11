@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Requirements Lock"
+  short_description: "Locks CAD requirements before modeling"
+  default_prompt: "Use $cad-requirements-lock to lock CAD requirements, unknowns, and acceptance criteria before modeling."

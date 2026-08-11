@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD External Skill Intake"
+  short_description: "Read-only review of external CAD skills"
+  default_prompt: "Use $cad-external-skill-intake to review GitHub or registry CAD skills safely before local absorption."

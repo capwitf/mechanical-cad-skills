@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Reference Acceptance"
+  short_description: "Gate CAD reference matches with numbered local-region checks."
+  default_prompt: "Validate this CAD/reference drawing match with numbered local regions and report pass/fail evidence."

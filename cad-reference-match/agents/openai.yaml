@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Reference Match"
+  short_description: "Checks CAD against reference regions"
+  default_prompt: "Use $cad-reference-match to compare a CAD drawing or model output against reference images, PDFs, or drawings."

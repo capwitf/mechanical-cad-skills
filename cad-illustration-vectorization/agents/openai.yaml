@@ -1,0 +1,4 @@
+interface:
+  display_name: "Illustration Vectorization"
+  short_description: "Turn artwork and photos into editable vector line art"
+  default_prompt: "Use $cad-illustration-vectorization to create an editable SVG, DXF, or DWG from this non-engineering image."

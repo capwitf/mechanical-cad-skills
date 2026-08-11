@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Toolchain Preflight"
+  short_description: "Checks CAD toolchain readiness first"
+  default_prompt: "Use $cad-toolchain-preflight to verify CAD skills, MCP servers, SolidWorks, or FreeCAD before relying on them."

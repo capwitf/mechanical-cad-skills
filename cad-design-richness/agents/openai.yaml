@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Design Richness"
+  short_description: "Checks mechanical detail and realism"
+  default_prompt: "Use $cad-design-richness to review whether a CAD design has realistic mechanical structure, standard features, and professional drawing detail."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Artifact Inspection"
+  short_description: "Inspect neutral CAD outputs"
+  default_prompt: "Use $cad-artifact-inspection to inspect STEP, STL, DXF, DWG, PDF, and other CAD delivery artifacts for nonblank content, metadata, entities, pages, and measurable evidence."

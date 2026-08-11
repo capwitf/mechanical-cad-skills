@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Original Design"
+  short_description: "Designs CAD without reference drawings"
+  default_prompt: "Use $cad-original-design to create an original mechanical CAD design when no reference drawing is provided."

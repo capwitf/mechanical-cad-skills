@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Evidence Ledger"
+  short_description: "Evidence manifest for CAD deliverables"
+  default_prompt: "Use $cad-evidence-ledger to create a manifest of CAD deliverable evidence, including file freshness, hashes, source, commands, and verified/inferred/unverified claims."

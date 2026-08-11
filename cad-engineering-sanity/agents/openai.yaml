@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Engineering Sanity"
+  short_description: "Mechanical plausibility checks for CAD"
+  default_prompt: "Use $cad-engineering-sanity to check loads, interfaces, clearances, standard features, and unverified engineering claims before accepting a CAD design."

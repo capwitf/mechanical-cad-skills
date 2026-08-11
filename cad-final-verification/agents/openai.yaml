@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Final Verification"
+  short_description: "Verifies final CAD delivery files"
+  default_prompt: "Use $cad-final-verification to verify CAD delivery files, source freshness, and final reporting before claiming completion."

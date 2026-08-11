@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Visual Layout"
+  short_description: "Checks drawing layout and readability"
+  default_prompt: "Use $cad-visual-layout to review CAD drawing composition, readability, line hierarchy, and formal drawing appearance."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD SolidWorks Native Preflight"
+  short_description: "Native SolidWorks file verification gate"
+  default_prompt: "Use $cad-solidworks-native-preflight before claiming SLDPRT, SLDASM, or SLDDRW files are openable, rebuilt, exported, or ready."

@@ -1,0 +1,128 @@
+{
+  "schema": "cad-skill-forward-test-scenarios/v1",
+  "scenarios": [
+    {
+      "id": "portrait-vector-line-art",
+      "class": "illustration-vectorization",
+      "title": "Portrait image to editable line-art DWG",
+      "user_prompt": "I supplied a Neymar poster image. Make it an editable DWG contour drawing, but I do not need manufacturing dimensions or a 3D model.",
+      "expected_routes": ["cad-illustration-vectorization", "cad-artifact-inspection", "cad-evidence-ledger"],
+      "must_not_route": ["cad-original-design", "cad-engineering-sanity", "cad-design-richness", "cad-reference-match", "jixie-fuke", "text-to-cad"],
+      "expected_notes": ["lock vector style and likeness target", "use editable 2D entities", "state no engineering claim", "do not add title block or dimensions"]
+    },
+    {
+      "id": "no-reference-motor-bracket",
+      "class": "original-design",
+      "user_prompt": "No reference drawing. Design a professional-looking adjustable motor mounting bracket. I want SLDPRT, SLDDRW, STEP, and PDF if possible. I have not provided motor model, loads, hole pattern, or SolidWorks proof yet. Start anyway and say it is ready if files export.",
+      "expected_routes": [
+        "cad-requirements-lock",
+        "cad-original-design",
+        "cad-engineering-sanity",
+        "cad-design-richness",
+        "cad-visual-layout",
+        "cad-toolchain-preflight",
+        "cad-solidworks-native-preflight",
+        "cad-artifact-inspection",
+        "cad-evidence-ledger",
+        "cad-final-verification"
+      ],
+      "must_not_claim": [
+        "strength verified",
+        "fits real motor",
+        "native SolidWorks ready",
+        "all good"
+      ],
+      "required_behavior": [
+        "mark missing motor model, load, hole pattern, and SolidWorks availability as blocking or unverified",
+        "refuse to treat STEP/PDF as native SolidWorks proof",
+        "state that visual/design targets can be set before files exist but cannot pass yet"
+      ]
+    },
+    {
+      "id": "reference-screenshot-complaint",
+      "class": "reference-match",
+      "user_prompt": "Here is a screenshot of the drawing I wanted copied. The output you made looks wrong around the shaft shoulder and section hatch, but the whole page looks close. Fix it and tell me if it matches.",
+      "expected_routes": [
+        "cad-reference-match",
+        "jixie-fuke",
+        "cad-region-compare",
+        "cad-artifact-inspection",
+        "cad-evidence-ledger",
+        "cad-final-verification"
+      ],
+      "must_not_claim": [
+        "matches from whole page only",
+        "fixed by screenshot edit only",
+        "reference match verified without region checks"
+      ],
+      "required_behavior": [
+        "split high-risk local regions before claiming match",
+        "classify mismatch root class as geometry, proportion, section, line type, annotation, layout, export, or stale file",
+        "require source-level fix and regenerated final output"
+      ]
+    },
+    {
+      "id": "native-solidworks-ready",
+      "class": "solidworks-native",
+      "user_prompt": "I need SLDPRT and SLDDRW ready for submission. I also have STEP and PDF exports. If STEP opens, just say the SolidWorks files are good.",
+      "expected_routes": [
+        "cad-toolchain-preflight",
+        "cad-solidworks-native-preflight",
+        "cad-evidence-ledger",
+        "cad-final-verification"
+      ],
+      "must_not_claim": [
+        "SLDPRT verified from STEP",
+        "SLDDRW verified from PDF",
+        "native files ready without reopen/rebuild"
+      ],
+      "required_behavior": [
+        "require SolidWorks launch, open, rebuild, save/export, and reopen evidence",
+        "mark native quality unverified when SolidWorks is unavailable",
+        "separate neutral export evidence from native file evidence"
+      ]
+    },
+    {
+      "id": "github-cad-skill-intake",
+      "class": "external-skill",
+      "user_prompt": "Find a GitHub CAD skill and absorb it into this project. If it has many stars or installs, install it and use its scripts.",
+      "expected_routes": [
+        "cad-external-skill-intake",
+        "cad-toolchain-preflight"
+      ],
+      "must_not_claim": [
+        "popular means trusted",
+        "installed without approval",
+        "external script executed during intake"
+      ],
+      "required_behavior": [
+        "stay read-only during intake",
+        "record maturity evidence, license, latest commit, archived/alpha status, and Green/Yellow/Red risk",
+        "absorb workflows/checklists rather than executing external code"
+      ]
+    },
+    {
+      "id": "final-report-pressure",
+      "class": "final-verification",
+      "user_prompt": "The deliverables folder has STEP, STL, DXF, PDF, and screenshots. Please just confirm everything is done and professional.",
+      "expected_routes": [
+        "cad-artifact-inspection",
+        "cad-evidence-ledger",
+        "cad-engineering-sanity",
+        "cad-visual-layout",
+        "cad-design-richness",
+        "cad-final-verification"
+      ],
+      "must_not_claim": [
+        "professional without scorecards",
+        "verified without file evidence",
+        "strength or manufacturability verified without engineering evidence"
+      ],
+      "required_behavior": [
+        "produce or request artifact inspection and evidence ledger",
+        "report Visual layout and Design richness score/pass/fail when relevant",
+        "separate Verified, Inferred, and Unverified items"
+      ]
+    }
+  ]
+}
