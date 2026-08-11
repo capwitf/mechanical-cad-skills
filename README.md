@@ -150,6 +150,19 @@ skill-name/
 
 新增或修改 Skill 后，应先运行集群验证器，再使用 `cad-skill-forward-test` 检查真实任务场景中的路由、证据和结论边界。
 
+## 问题反馈与联系
+
+遇到使用问题、Skill 路由错误、验证结果异常或文档缺失时，优先提交 [GitHub Issue](https://github.com/capwitf/mechanical-cad-skills/issues)，便于保留复现信息和后续跟踪。
+
+提交问题时，请尽量附上：
+
+- 使用的 Skill 名称和完整调用目标。
+- 输入文件类型与最小复现步骤。
+- 预期结果、实际结果和验证脚本输出。
+- 已脱敏的日志、截图或证据清单；不要上传密码、令牌、客户图纸或其他敏感文件。
+
+需要直接联系维护者时，可以发送邮件至 [capwitf@outlook.com](mailto:capwitf@outlook.com)。
+
 ## License
 
 当前目录尚未包含 `LICENSE` 文件。在明确许可证之前，本项目未授予复制、修改或再分发许可。
